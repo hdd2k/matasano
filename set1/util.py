@@ -49,7 +49,8 @@ def raw_2_base64(raw_base64):
 # Raw binary data operations
 ############################
 
-
+def xor(raw1, raw2):
+    return bytes(c1^c2 for c1,c2 in zip(raw1, raw2))
 
 
 
