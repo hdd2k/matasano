@@ -27,7 +27,7 @@ def bin_2_raw(bin_str):
     # return int(bin_str, 2)
 
 def base64_2_raw(base64_str):
-    pass
+    return binascii.a2b_base64(base64_str)
 
 
 ############################
@@ -50,6 +50,7 @@ def raw_2_base64(raw_base64):
 ############################
 
 def xor(raw1, raw2):
+    assert len(raw1) == len(raw2)
     return bytes(c1^c2 for c1,c2 in zip(raw1, raw2))
 
 
